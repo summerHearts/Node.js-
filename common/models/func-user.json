@@ -1,0 +1,32 @@
+{
+  "name": "FuncUser",
+  "plural": "users",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "fullName": {
+      "type": "string",
+      "required": true,
+      "default": "kenvin"
+    },
+    "age": {
+      "type": "number",
+      "required": true,
+      "default": 35
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [
+    {
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "userDetailInfo"
+    }
+  ],
+  "methods": {}
+}
